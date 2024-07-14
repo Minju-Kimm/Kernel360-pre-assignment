@@ -1,8 +1,10 @@
-package com.example.simple_board.post.db;
+package com.example.simple_board.post.model;
 
 import com.example.simple_board.board.db.BoardEntity;
 import com.example.simple_board.reply.db.ReplyEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,21 +13,18 @@ import java.util.List;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Builder
-@Entity(name = "post")
-public class PostEntity {
+@JsonNaming(value = PropertyNamingStrategies.SnakeCaseStrategy.class)
+public class PostDto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne //나는 N이고 상대는 1이다
-    @JsonIgnore
-    @ToString.Exclude
-    private BoardEntity board;
+    private Long boardId;
 
     private String userName;
 
@@ -37,15 +36,9 @@ public class PostEntity {
 
     private String title;
 
-    @Column(columnDefinition = "TEXT")
     private String content;
 
     private LocalDateTime postedAt;
 
-    @OneToMany(
-            mappedBy = "post"
-    )
-    @Builder.Default
     private List<ReplyEntity> replyList = List.of();
-
 }
