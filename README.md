@@ -33,6 +33,10 @@
 [Spring Data JPA 정리본](https://velog.io/@kirby0418/Kernel-360-%EB%B0%B1%EC%97%94%EB%93%9C-2%EA%B8%B0-%EC%82%AC%EC%A0%84-%EA%B3%BC%EC%A0%9C-Ch-06.-Spring-Data-JPA)
 ## Ch 07. JPA로의 변환
 [JPA로의 변환 정리본](https://velog.io/@kirby0418/Kernel-360-%EB%B0%B1%EC%97%94%EB%93%9C-2%EA%B8%B0-%EC%82%AC%EC%A0%84-%EA%B3%BC%EC%A0%9C-Ch-07.-JPA%EB%A1%9C%EC%9D%98-%EB%B3%80%ED%99%98)
+## Ch 08. 간단한 게시판 프로젝트
+- 강의 끝쪽에서 에러가 자꾸 발생하여, 코드를 모두 입력해보긴 했지만 에러 해결 후 블로그 작성 재개할 예정입니다.
+- 일단 정리한 내용을 노션으로 올립니다.
+[간단한 게시판 프로젝트 정리본](https://minju0418.notion.site/ch-08-20979a9106884ad0b8ab55f3ebebadc6?pvs=4)
 
 # 개발 도구
 - Java 17
